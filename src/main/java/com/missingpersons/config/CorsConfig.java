@@ -8,7 +8,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 public class CorsConfig {
-	  @Value("${cors.allowed.origins=https://finding-missing-person.netlify.app/missing-persons}")
+	  @Value("${cors.allowed.origins=https://finding-missing-person.netlify.app}")
 	    private String allowedOrigins;
 	  
 	  
