@@ -18,7 +18,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/persons")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "https://finding-missing-person.netlify.app/")
+@CrossOrigin(origins = "https://finding-missing-person.netlify.app")
 public class MissingPersonController {
 	@Autowired
     private  MissingPersonService personService;
