@@ -8,7 +8,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 public class CorsConfig {
-	@Value("${cors.allowed.origins:http://localhost:3000,https://finding-missing-person.netlify.app}")
+	@Value("${cors.allowed.origins:http://localhost:3000}")
 	    private String allowedOrigins;
 	  
 	  
@@ -21,7 +21,8 @@ public class CorsConfig {
 	                        .allowedOrigins("*")
 	                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
 	                        .allowedHeaders("*")
-	                        .allowCredentials(true);
+	                        .allowCredentials(true)
+	                        .maxAge(3600);
 	            }
 	        };
 	  }
