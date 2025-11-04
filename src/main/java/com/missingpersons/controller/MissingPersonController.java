@@ -18,9 +18,14 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/persons")
 @RequiredArgsConstructor
+//@CrossOrigin(origins = {
+//        "http://localhost:3000",
+//        "https://semiprofessionally-unneighborly-nell.ngrok-free.dev", 
+//        "https://finding-missing-person.netlify.app"
+//})
 //@CrossOrigin(origins = "http://localhost:3000")
-//@CrossOrigin(origins = "https://finding-missing-person.netlify.app")
-@CrossOrigin(origins = {"https://finding-missing-person.netlify.app", "http://localhost:3000"})
+@CrossOrigin(origins = "https://finding-missing-person.netlify.app")
+//@CrossOrigin(origins = {"https://finding-missing-person.netlify.app", "http://localhost:3000"})
 public class MissingPersonController {
 	@Autowired
     private  MissingPersonService personService;
